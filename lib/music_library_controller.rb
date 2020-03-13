@@ -61,8 +61,6 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets.chomp
-<<<<<<< HEAD
-
       if Artist.find_by_name(input)
       artist = Artist.find_by_name(input)
       songs = artist.songs.sort{|a, b| a.name<=>b.name}
@@ -77,12 +75,11 @@ class MusicLibraryController
       genre = Genre.find_by_name(input)
       songs = genre.songs.sort{|a, b| a.name<=>b.name}
       songs.each.with_index(1) {|s, i| puts "#{i}. #{s.artist.name} - #{s.name}"}
-=======
+
     binding.pry
       if Artist.find_by_name(input)
       artist = Artist.find_by_name(input)
       artist.songs.sort{|a, b| a.name<=>b.name}
->>>>>>> 6874b7771dfde94084e8eb3f59858a97901c8331
       end
   end
 
