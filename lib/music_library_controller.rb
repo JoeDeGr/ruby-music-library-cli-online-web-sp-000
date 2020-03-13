@@ -76,7 +76,6 @@ class MusicLibraryController
       songs = genre.songs.sort{|a, b| a.name<=>b.name}
       songs.each.with_index(1) {|s, i| puts "#{i}. #{s.artist.name} - #{s.name}"}
 
-    binding.pry
       if Artist.find_by_name(input)
       artist = Artist.find_by_name(input)
       artist.songs.sort{|a, b| a.name<=>b.name}
